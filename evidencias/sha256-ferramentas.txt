@@ -1,0 +1,2 @@
+97c566b120009c203a2fc8b291f4a9adbc171cf1ccb70f06f6b4e1828c00ce8e  ecj-3.38.0.jar
+a1de557821293ce903c213c694165fff532cf92081bac4238b9e05b35f04f43f  junit-platform-console-standalone-1.10.2.jar

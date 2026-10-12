@@ -1,0 +1,1 @@
+[{"nome": "cliente teste", "cpf": "00000000000", "contas": [{"numeroConta": 12345, "saldo": 113, "dividaDeEmprestimo": 0, "cartao": {"numero": 123456, "csv": 123}, "cartaoCredito": {"numero": 123456, "csv": 123, "fatura": 0, "indexMesDaFatura": 1, "faturaPaga": true, "limite": 1000}, "extrato": []}]}]

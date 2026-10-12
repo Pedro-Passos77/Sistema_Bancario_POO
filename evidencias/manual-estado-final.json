@@ -1,0 +1,58 @@
+[
+  {
+    "nome": "cliente teste",
+    "cpf": "00000000000",
+    "contas": [
+      {
+        "cartaoCredito": {
+          "fatura": 0.0,
+          "mesDaFatura": "Fevereiro",
+          "indexMesDaFatura": 1,
+          "faturaPaga": true,
+          "limite": 1000.0,
+          "numero": 123456,
+          "csv": 123
+        },
+        "numeroConta": 12345,
+        "saldo": 4724.0,
+        "cartao": {
+          "numero": 123456,
+          "csv": 123
+        },
+        "dividaDeEmprestimo": 0.0,
+        "extrato": [
+          {
+            "mesAtual": "Janeiro",
+            "dinheiroMovimentado": 13.0,
+            "tipoDaMovimentacao": "SAIDA"
+          },
+          {
+            "mesAtual": "Fevereiro",
+            "dinheiroMovimentado": 250.0,
+            "tipoDaMovimentacao": "SAIDA"
+          },
+          {
+            "mesAtual": "Fevereiro",
+            "dinheiroMovimentado": 100.0,
+            "tipoDaMovimentacao": "SAIDA"
+          },
+          {
+            "mesAtual": "Fevereiro",
+            "dinheiroMovimentado": 150.0,
+            "tipoDaMovimentacao": "SAIDA"
+          },
+          {
+            "mesAtual": "Fevereiro",
+            "dinheiroMovimentado": 1100.0,
+            "tipoDaMovimentacao": "SAIDA"
+          },
+          {
+            "mesAtual": "Fevereiro",
+            "dinheiroMovimentado": 13.0,
+            "tipoDaMovimentacao": "SAIDA"
+          }
+        ]
+      }
+    ]
+  }
+]

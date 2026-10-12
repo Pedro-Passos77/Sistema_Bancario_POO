@@ -1,0 +1,137 @@
+[
+  {
+    "arquivo": "br/winxbank/Main.java",
+    "sha256": "c7fd6bed4d70d54cdac450d10e3cf1565a0874e12518baeba369c8b0a8086579",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/BankAccountIsNotCurrentAccountException.java",
+    "sha256": "eb24c08a057d7953ccbf1bd807b883b650d8cc243fe3aae090c1689265bd0be8",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/BankAccountIsNotSavingsAccountException.java",
+    "sha256": "7dd96849ad63a91a498e9c574f1c02d603276165fdb3d5850eaa2d179b99f58a",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/BankAccountNotFoundException.java",
+    "sha256": "48372616162751d74d95b3c9c454e6af5141b156a05ba4126186469867196b4c",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/ClientFoundIsNotClientWinxException.java",
+    "sha256": "9c0f8e25cbcc8ee7fa8ec9ce3233966f6379f552a974afa743867f3439aa30bb",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/ClientNotFoundException.java",
+    "sha256": "e8420e19ea1be0dd8e2695b903b915e90a5229273f99b57b14886fb59b296752",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/NotEnaughPurchasePoints.java",
+    "sha256": "b315f72dd19c23a6093f638ef2dbf8d9741504a281d720dc7e5171d351e0271b",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/ValueIsHigherThanBalanceException.java",
+    "sha256": "dfd8ab28bb7979dae79800e1850af36e3bfce85506e05f227d17ccd0f8040db1",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/exception/YouAreNotLoggedInException.java",
+    "sha256": "c1adc2996e0fa52c308eecd1fe89fd0e4486c4c211868623de9a2f6098301f5e",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/geradordedocumentos/ArquivoExtrato.java",
+    "sha256": "f1b381bc456b1bc57312574ef185df817d04764760ca27707fd89851dee73112",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/geradordedocumentos/ArquivoInformeRendimento.java",
+    "sha256": "59584af503a081e1de6e3beaef83db43678f0f415faada63c3c5ab836b08f017",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/random/RandomNumberGenerator.java",
+    "sha256": "86bbe0b784ed98e3338ff274b69dd1ca653168479239bb380e362201b6bb233b",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/repository/ArquivoBanco.java",
+    "sha256": "e0381994c294711e9ff1918e91a86a9c1d6320066378716bb9bf0362aed4b9b7",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/repository/ArquivoDeClientes.java",
+    "sha256": "b69ba1d11dde53e589dbb4bafbd4b00385759291003b3b4951ac8f5806ac86b0",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/repository/ArquivoDeMesAtual.java",
+    "sha256": "0e0c63e93a5b815a9f797954d49f87709d046f71156894424d23bcc91a4c949a",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/Banco.java",
+    "sha256": "f012ddb2faed121687c4cbdfd1843a0c2f29ffcb484318df2ed60eab53314f8a",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/Cartao.java",
+    "sha256": "66f7f3361785015d1b33ac17c42f80b99cb9be3aa4bb07edbe27aa01d31b5696",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/CartaoCredito.java",
+    "sha256": "e24e1c19660931d498e627f38f027b3508fe30e3394932813d2db6baab2c43ea",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/Conta.java",
+    "sha256": "656d5786021419304b46d7ee75d5076077e4e280182313d2c8bea83b51c8db40",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/ContaCorrente.java",
+    "sha256": "78d78415f65890f84cd9dc20dc31992bdc64cff1d21058b68562d645ef959ebf",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/ContaPoupanca.java",
+    "sha256": "fda99f53a13a4662d3097bc2ef0d65c4a50754276d47e804689ca766eb86e676",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/Movimentacao.java",
+    "sha256": "95aa79dc2f9eabb24dbf4671f225de364472678e8cbc173aebd4ffc24bb7582f",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemabancario/OperacoesAutomaticas.java",
+    "sha256": "9bfa7688aa543b2d769892f34382314d18dfd8c1a885343e60a9ddc3133a06d3",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemaclientes/Cliente.java",
+    "sha256": "63e35a8efbcdcce3614d314cb6c309176a6d39071811532310f7d961524db370",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemaclientes/ClienteWinx.java",
+    "sha256": "49b097940cdf74b06ecc05a1e6d16cecefc038bfc85af352d2c89bd375732ca3",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/sistemaclientes/RegistroDeClientes.java",
+    "sha256": "c0ac3e80dbcced8a49448509c854b2f630fe433aed63d819026a3c62fccd3d23",
+    "original_preservado": true
+  },
+  {
+    "arquivo": "br/winxbank/tempo/Ano.java",
+    "sha256": "48885f2959e2b2fbc14fc83aca0319e033756f4f6f35ec66754f4520831e5ba6",
+    "original_preservado": true
+  }
+]

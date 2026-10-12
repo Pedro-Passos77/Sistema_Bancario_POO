@@ -1,0 +1,224 @@
+------------------ Clientes --------------------
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 5000.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+------------------------------------------------
+Mes atual: Janeiro
+             Bem-vindo ao WinxBank!
+           Digite o que deseja fazer:
+----------------- MENU INICIAL -----------------
+1 - (criar um usuario) 
+2 - (logar em um usuario)
+------------------------------------------------
+------------------ Clientes --------------------
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4987.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+Digite o cpf do usuario que deseja logar:
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4987.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+Mes atual: Fevereiro
+          Bem-vindo ao WinxBank!
+      Ola, cliente teste Digite o que deseja fazer:
+----------------- MENU INICIAL ----------------- 
+0 - (encerrar programa) 
+1 - (criar um usuario) 
+2 - (logar em um usuario)
+--------------------- MENU ---------------------
+3 - (abrir conta)
+4 - (fechar conta)
+5 - (apagar usuario)
+6 - (depositar)
+7 - (comprar)
+8 - (fazer pix)
+9 - (sacar)
+10 - (pagar fatura)
+11 - (ajustar limite)
+12 - (pagar parcela emprestimo)
+13 - (requisitar emprestimo)
+14 - (converter pontos em saldo)
+15 - (gerar extrato)
+16 - (gerar informe rendimento)
+17 - (exibir clientes)
+18 - (limpar clientes)
+19 - (visualizar dados do banco)
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4987.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+Visualize suas contas acima. Digite o numero da conta que deseja realizar a compra:
+Digite o valor da sua compra:
+Você deseja pagar no debito ou no credito? 1 (debito) ou 2 (credito)
+------------------------------------------------
+123456
+123
+------------------------------------------------
+Este e o cartao que deseja utilizar? Digite 1 (confirmar)
+Valor creditado.
+Seu usuario está sendo atualizado...
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4987.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 250.00 ]
+------------------------------------------------
+Mes atual: Fevereiro
+          Bem-vindo ao WinxBank!
+      Ola, cliente teste Digite o que deseja fazer:
+----------------- MENU INICIAL ----------------- 
+0 - (encerrar programa) 
+1 - (criar um usuario) 
+2 - (logar em um usuario)
+--------------------- MENU ---------------------
+3 - (abrir conta)
+4 - (fechar conta)
+5 - (apagar usuario)
+6 - (depositar)
+7 - (comprar)
+8 - (fazer pix)
+9 - (sacar)
+10 - (pagar fatura)
+11 - (ajustar limite)
+12 - (pagar parcela emprestimo)
+13 - (requisitar emprestimo)
+14 - (converter pontos em saldo)
+15 - (gerar extrato)
+16 - (gerar informe rendimento)
+17 - (exibir clientes)
+18 - (limpar clientes)
+19 - (visualizar dados do banco)
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4987.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 250.00 ]
+------------------------------------------------
+Visualize suas contas acima. Digite o numero da conta corrente a qual deseja pagar a fatura:
+Digite o valor que deseja pagar da sua fatura:
+Seu usuario está sendo atualizado...
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4887.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 150.00 ]
+------------------------------------------------
+Mes atual: Fevereiro
+          Bem-vindo ao WinxBank!
+      Ola, cliente teste Digite o que deseja fazer:
+----------------- MENU INICIAL ----------------- 
+0 - (encerrar programa) 
+1 - (criar um usuario) 
+2 - (logar em um usuario)
+--------------------- MENU ---------------------
+3 - (abrir conta)
+4 - (fechar conta)
+5 - (apagar usuario)
+6 - (depositar)
+7 - (comprar)
+8 - (fazer pix)
+9 - (sacar)
+10 - (pagar fatura)
+11 - (ajustar limite)
+12 - (pagar parcela emprestimo)
+13 - (requisitar emprestimo)
+14 - (converter pontos em saldo)
+15 - (gerar extrato)
+16 - (gerar informe rendimento)
+17 - (exibir clientes)
+18 - (limpar clientes)
+19 - (visualizar dados do banco)
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4887.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 150.00 ]
+------------------------------------------------
+Visualize suas contas acima. Digite o numero da conta corrente a qual deseja pagar a fatura:
+Digite o valor que deseja pagar da sua fatura:
+Seu usuario está sendo atualizado...
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4737.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+Mes atual: Fevereiro
+          Bem-vindo ao WinxBank!
+      Ola, cliente teste Digite o que deseja fazer:
+----------------- MENU INICIAL ----------------- 
+0 - (encerrar programa) 
+1 - (criar um usuario) 
+2 - (logar em um usuario)
+--------------------- MENU ---------------------
+3 - (abrir conta)
+4 - (fechar conta)
+5 - (apagar usuario)
+6 - (depositar)
+7 - (comprar)
+8 - (fazer pix)
+9 - (sacar)
+10 - (pagar fatura)
+11 - (ajustar limite)
+12 - (pagar parcela emprestimo)
+13 - (requisitar emprestimo)
+14 - (converter pontos em saldo)
+15 - (gerar extrato)
+16 - (gerar informe rendimento)
+17 - (exibir clientes)
+18 - (limpar clientes)
+19 - (visualizar dados do banco)
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4737.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+Visualize suas contas acima. Digite o numero da conta que deseja realizar a compra:
+Digite o valor da sua compra:
+Você deseja pagar no debito ou no credito? 1 (debito) ou 2 (credito)
+------------------------------------------------
+123456
+123
+------------------------------------------------
+Este e o cartao que deseja utilizar? Digite 1 (confirmar)
+Valor creditado.
+Seu usuario está sendo atualizado...
+------------------------------------------------
+Cliente atual: 
+Nome: cliente teste| CPF: 00000000000
+Contas:
+[ ContaCorrenteno: 12345 | Saldo: 4737.00 | DividaEmprestimo: 0.00 | Cartao Debito no: 123456| csv: 123 | Cartao Credito no: 123456| csv: 123| fatura: 0.00 ]
+------------------------------------------------
+Mes atual: Fevereiro
+          Bem-vindo ao WinxBank!
+      Ola, cliente teste Digite o que deseja fazer:
+----------------- MENU INICIAL ----------------- 
+0 - (encerrar programa) 
+1 - (criar um usuario) 
+2 - (logar em um usuario)
+--------------------- MENU ---------------------
+3 - (abrir conta)
+4 - (fechar conta)
+5 - (apagar usuario)
+6 - (depositar)
+7 - (comprar)
+8 - (fazer pix)
+9 - (sacar)
+10 - (pagar fatura)
+11 - (ajustar limite)
+12 - (pagar parcela emprestimo)
+13 - (requisitar emprestimo)
+14 - (converter pontos em saldo)
+15 - (gerar extrato)
+16 - (gerar informe rendimento)
+17 - (exibir clientes)
+18 - (limpar clientes)
+19 - (visualizar dados do banco)

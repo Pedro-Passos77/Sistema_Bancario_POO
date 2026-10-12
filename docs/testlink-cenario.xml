@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testcases>
+  <testcase name="M01 Compra no credito abaixo do limite">
+    <node_order><![CDATA[1]]></node_order>
+    <externalid><![CDATA[1]]></externalid>
+    <version><![CDATA[1]]></version>
+    <summary><![CDATA[<p>Verificar a compra de R$ 250 no credito, com limite de R$ 1000.</p>]]></summary>
+    <preconditions><![CDATA[<p>Projeto WinxBank T1. Restaurar os dados ficticios da fixture compra e iniciar o TestLink 1.9.0. No WinxBank, selecionar a opcao 2, informar CPF 00000000000 e aguardar login. Estado: conta 12345, saldo R$ 4987, limite do cartao R$ 1000 e fatura R$ 0. O primeiro acesso avanca o mes e desconta taxa de manutencao de R$ 13.</p>]]></preconditions>
+    <execution_type><![CDATA[1]]></execution_type>
+    <importance><![CDATA[2]]></importance>
+    <steps>
+      <step>
+        <step_number><![CDATA[1]]></step_number>
+        <actions><![CDATA[<p>No WinxBank, selecionar a opcao 7 para comprar.</p>]]></actions>
+        <expectedresults><![CDATA[<p>O sistema solicita o numero da conta.</p>]]></expectedresults>
+        <execution_type><![CDATA[1]]></execution_type>
+      </step>
+      <step>
+        <step_number><![CDATA[2]]></step_number>
+        <actions><![CDATA[<p>Informar conta 12345 e valor 250.</p>]]></actions>
+        <expectedresults><![CDATA[<p>O sistema oferece debito ou credito.</p>]]></expectedresults>
+        <execution_type><![CDATA[1]]></execution_type>
+      </step>
+      <step>
+        <step_number><![CDATA[3]]></step_number>
+        <actions><![CDATA[<p>Escolher credito (2) e confirmar o cartao (1).</p>]]></actions>
+        <expectedresults><![CDATA[<p>O sistema confirma a compra; a fatura passa a R$ 250 e o saldo da conta permanece em R$ 4987.</p>]]></expectedresults>
+        <execution_type><![CDATA[1]]></execution_type>
+      </step>
+    </steps>
+  </testcase>
+</testcases>

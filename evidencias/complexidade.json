@@ -1,0 +1,56 @@
+{
+  "classe": "CartaoCredito",
+  "criterio": "CC por rotina = 1 + decisoes; && e || contam separadamente; apenas rotinas declaradas; construtores incluidos no agregado",
+  "sha256": "e24e1c19660931d498e627f38f027b3508fe30e3394932813d2db6baab2c43ea",
+  "rotinas": [
+    {
+      "metodo": "CartaoCredito",
+      "decisoes": [],
+      "cc": 1
+    },
+    {
+      "metodo": "CartaoCredito",
+      "decisoes": [],
+      "cc": 1
+    },
+    {
+      "metodo": "creditar",
+      "decisoes": [],
+      "cc": 1
+    },
+    {
+      "metodo": "ajustarLimite",
+      "decisoes": [],
+      "cc": 1
+    },
+    {
+      "metodo": "setFatura",
+      "decisoes": [
+        "if",
+        "if"
+      ],
+      "cc": 3
+    },
+    {
+      "metodo": "getFatura",
+      "decisoes": [],
+      "cc": 1
+    },
+    {
+      "metodo": "cobrarJurus",
+      "decisoes": [
+        "if",
+        "&&"
+      ],
+      "cc": 3
+    },
+    {
+      "metodo": "movimentacaoBancaria",
+      "decisoes": [],
+      "cc": 1
+    }
+  ],
+  "agregado_com_construtores": 12,
+  "agregado_sem_construtores": 10,
+  "maior_cc_por_rotina": 3
+}

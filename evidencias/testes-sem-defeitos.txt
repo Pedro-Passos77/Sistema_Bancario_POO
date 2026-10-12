@@ -1,0 +1,37 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+Digite o valor do limite do seu cartão que deseja ajustar: 
+╷
+├─ JUnit Jupiter ✔
+│  └─ CartaoCreditoTest ✔
+│     ├─ u09_mes_da_compra_sem_juros() ✔
+│     ├─ u08_pagamento_total_impede_juros() ✔
+│     ├─ u07_pagamento_parcial() ✔
+│     ├─ u06_compra_que_ultrapassa_limite_preserva_fatura() ✔
+│     ├─ u03_compra_no_limite() ✔
+│     ├─ u04_compra_acima_do_limite_nao_altera_fatura() ✔
+│     ├─ u01_cartao_novo_tem_fatura_zero() ✔
+│     ├─ u13_construtor_de_persistencia_preserva_fatura() ✔
+│     ├─ u02_compra_abaixo_do_limite() ✔
+│     ├─ u05_compras_acumuladas_ate_olimite() ✔
+│     ├─ u11_ajuste_do_limite_permite_compra_maior() ✔
+│     ├─ u10_fatura_paga_nao_gera_receita() ✔
+│     └─ u12_movimentacao_registra_receita() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 419 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        13 tests found           ]
+[         0 tests skipped         ]
+[        13 tests started         ]
+[         0 tests aborted         ]
+[        13 tests successful      ]
+[         0 tests failed          ]
+

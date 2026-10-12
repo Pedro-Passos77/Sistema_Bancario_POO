@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="19" skipped="0" failures="6" errors="0" time="0.169" hostname="5b8f9942e282" timestamp="2026-10-12T17:34:18">
+<properties>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="/"/>
+<property name="java.class.path" value="/workspace/scratch/3b077ffeadf0/entrega1/ferramentas/junit-platform-console-standalone-1.10.2.jar"/>
+<property name="java.class.version" value="61.0"/>
+<property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+<property name="java.io.tmpdir" value="/tmp"/>
+<property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="17.0.20+8-1-24.04-Ubuntu"/>
+<property name="java.specification.maintenance.version" value="1"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="17"/>
+<property name="java.vendor" value="Ubuntu"/>
+<property name="java.vendor.url" value="https://ubuntu.com/"/>
+<property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+<property name="java.version" value="17.0.20"/>
+<property name="java.version.date" value="2026-07-21"/>
+<property name="java.vm.compressedOopsMode" value="32-bit"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="17"/>
+<property name="java.vm.vendor" value="Ubuntu"/>
+<property name="java.vm.version" value="17.0.20+8-1-24.04-Ubuntu"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="UTF-8"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Linux"/>
+<property name="os.version" value="6.18.44"/>
+<property name="path.separator" value=":"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="/workspace/scratch/3b077ffeadf0/entrega1/ferramentas/junit-platform-console-standalone-1.10.2.jar execute --class-path /workspace/scratch/3b077ffeadf0/entrega1/build/classes:/workspace/scratch/3b077ffeadf0/entrega1/build/test-classes --select-class br.winxbank.sistemabancario.CartaoCreditoTest --disable-ansi-colors --reports-dir /workspace/scratch/3b077ffeadf0/entrega1/evidencias/junit"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="UTF-8"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="user.dir" value="/workspace/scratch/3b077ffeadf0"/>
+<property name="user.home" value="/root"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="root"/>
+<property name="user.timezone" value="America/Sao_Paulo"/>
+</properties>
+<testcase name="u09_mes_da_compra_sem_juros()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.031">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u09_mes_da_compra_sem_juros()]
+display-name: u09_mes_da_compra_sem_juros()
+]]></system-out>
+</testcase>
+<testcase name="u04_compra_acima_do_limite_nao_altera_fatura()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u04_compra_acima_do_limite_nao_altera_fatura()]
+display-name: u04_compra_acima_do_limite_nao_altera_fatura()
+]]></system-out>
+</testcase>
+<testcase name="u01_cartao_novo_tem_fatura_zero()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u01_cartao_novo_tem_fatura_zero()]
+display-name: u01_cartao_novo_tem_fatura_zero()
+]]></system-out>
+</testcase>
+<testcase name="u02_compra_abaixo_do_limite()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u02_compra_abaixo_do_limite()]
+display-name: u02_compra_abaixo_do_limite()
+]]></system-out>
+</testcase>
+<testcase name="u16_compra_recusada_nao_adia_vencimento()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.002">
+<failure message="Compra recusada deve preservar o mes da fatura existente ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Compra recusada deve preservar o mes da fatura existente ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at br.winxbank.sistemabancario.CartaoCreditoTest.u16_compra_recusada_nao_adia_vencimento(CartaoCreditoTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u16_compra_recusada_nao_adia_vencimento()]
+display-name: u16_compra_recusada_nao_adia_vencimento()
+]]></system-out>
+</testcase>
+<testcase name="u06_compra_que_ultrapassa_limite_preserva_fatura()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u06_compra_que_ultrapassa_limite_preserva_fatura()]
+display-name: u06_compra_que_ultrapassa_limite_preserva_fatura()
+]]></system-out>
+</testcase>
+<testcase name="u10_fatura_paga_nao_gera_receita()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u10_fatura_paga_nao_gera_receita()]
+display-name: u10_fatura_paga_nao_gera_receita()
+]]></system-out>
+</testcase>
+<testcase name="u13_construtor_de_persistencia_preserva_fatura()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u13_construtor_de_persistencia_preserva_fatura()]
+display-name: u13_construtor_de_persistencia_preserva_fatura()
+]]></system-out>
+</testcase>
+<testcase name="u17_compra_negativa_deve_ser_rejeitada()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.009">
+<failure message="Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at br.winxbank.sistemabancario.CartaoCreditoTest.u17_compra_negativa_deve_ser_rejeitada(CartaoCreditoTest.java:149)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u17_compra_negativa_deve_ser_rejeitada()]
+display-name: u17_compra_negativa_deve_ser_rejeitada()
+]]></system-out>
+</testcase>
+<testcase name="u05_compras_acumuladas_ate_olimite()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u05_compras_acumuladas_ate_olimite()]
+display-name: u05_compras_acumuladas_ate_olimite()
+]]></system-out>
+</testcase>
+<testcase name="u19_juros_nao_devem_duplicar_no_mesmo_mes()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.003">
+<failure message="expected: &lt;1275.0&gt; but was: &lt;16256.25&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1275.0> but was: <16256.25>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1014)
+	at br.winxbank.sistemabancario.CartaoCreditoTest.u19_juros_nao_devem_duplicar_no_mesmo_mes(CartaoCreditoTest.java:166)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u19_juros_nao_devem_duplicar_no_mesmo_mes()]
+display-name: u19_juros_nao_devem_duplicar_no_mesmo_mes()
+]]></system-out>
+</testcase>
+<testcase name="u08_pagamento_total_impede_juros()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.003">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u08_pagamento_total_impede_juros()]
+display-name: u08_pagamento_total_impede_juros()
+]]></system-out>
+</testcase>
+<testcase name="u14_juros_de1275_por_cento()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.013">
+<failure message="Hipotese de requisito: taxaJurus=12.75 representa 12,75% ao mes ==&gt; expected: &lt;112.75&gt; but was: &lt;1275.0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Hipotese de requisito: taxaJurus=12.75 representa 12,75% ao mes ==> expected: <112.75> but was: <1275.0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+	at br.winxbank.sistemabancario.CartaoCreditoTest.u14_juros_de1275_por_cento(CartaoCreditoTest.java:126)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u14_juros_de1275_por_cento()]
+display-name: u14_juros_de1275_por_cento()
+]]></system-out>
+</testcase>
+<testcase name="u18_limite_negativo_deve_ser_rejeitado()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.019">
+<failure message="Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown." type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at br.winxbank.sistemabancario.CartaoCreditoTest.u18_limite_negativo_deve_ser_rejeitado(CartaoCreditoTest.java:156)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u18_limite_negativo_deve_ser_rejeitado()]
+display-name: u18_limite_negativo_deve_ser_rejeitado()
+]]></system-out>
+</testcase>
+<testcase name="u11_ajuste_do_limite_permite_compra_maior()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.002">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u11_ajuste_do_limite_permite_compra_maior()]
+display-name: u11_ajuste_do_limite_permite_compra_maior()
+]]></system-out>
+</testcase>
+<testcase name="u12_movimentacao_registra_receita()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.001">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u12_movimentacao_registra_receita()]
+display-name: u12_movimentacao_registra_receita()
+]]></system-out>
+</testcase>
+<testcase name="u07_pagamento_parcial()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u07_pagamento_parcial()]
+display-name: u07_pagamento_parcial()
+]]></system-out>
+</testcase>
+<testcase name="u03_compra_no_limite()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u03_compra_no_limite()]
+display-name: u03_compra_no_limite()
+]]></system-out>
+</testcase>
+<testcase name="u15_juros_na_virada_do_ano()" classname="br.winxbank.sistemabancario.CartaoCreditoTest" time="0.004">
+<failure message="Dezembro para janeiro deve ser um mes posterior ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Dezembro para janeiro deve ser um mes posterior ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+	at br.winxbank.sistemabancario.CartaoCreditoTest.u15_juros_na_virada_do_ano(CartaoCreditoTest.java:134)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:br.winxbank.sistemabancario.CartaoCreditoTest]/[method:u15_juros_na_virada_do_ano()]
+display-name: u15_juros_na_virada_do_ano()
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

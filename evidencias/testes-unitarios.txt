@@ -1,0 +1,117 @@
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+Digite o valor do limite do seu cartão que deseja ajustar: 
+Digite o valor do limite do seu cartão que deseja ajustar: 
+╷
+├─ JUnit Jupiter ✔
+│  └─ CartaoCreditoTest ✔
+│     ├─ u09_mes_da_compra_sem_juros() ✔
+│     ├─ u08_pagamento_total_impede_juros() ✔
+│     ├─ u14_juros_de1275_por_cento() ✘ Hipotese de requisito: taxaJurus=12.75 representa 12,75% ao mes ==> expected: <112.75> but was: <1275.0>
+│     ├─ u07_pagamento_parcial() ✔
+│     ├─ u06_compra_que_ultrapassa_limite_preserva_fatura() ✔
+│     ├─ u18_limite_negativo_deve_ser_rejeitado() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ u03_compra_no_limite() ✔
+│     ├─ u04_compra_acima_do_limite_nao_altera_fatura() ✔
+│     ├─ u01_cartao_novo_tem_fatura_zero() ✔
+│     ├─ u13_construtor_de_persistencia_preserva_fatura() ✔
+│     ├─ u02_compra_abaixo_do_limite() ✔
+│     ├─ u05_compras_acumuladas_ate_olimite() ✔
+│     ├─ u11_ajuste_do_limite_permite_compra_maior() ✔
+│     ├─ u15_juros_na_virada_do_ano() ✘ Dezembro para janeiro deve ser um mes posterior ==> expected: <true> but was: <false>
+│     ├─ u19_juros_nao_devem_duplicar_no_mesmo_mes() ✘ expected: <1275.0> but was: <16256.25>
+│     ├─ u10_fatura_paga_nao_gera_receita() ✔
+│     ├─ u17_compra_negativa_deve_ser_rejeitada() ✘ Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+│     ├─ u12_movimentacao_registra_receita() ✔
+│     └─ u16_compra_recusada_nao_adia_vencimento() ✘ Compra recusada deve preservar o mes da fatura existente ==> expected: <true> but was: <false>
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Failures (6):
+  JUnit Jupiter:CartaoCreditoTest:u14_juros_de1275_por_cento()
+    MethodSource [className = 'br.winxbank.sistemabancario.CartaoCreditoTest', methodName = 'u14_juros_de1275_por_cento', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Hipotese de requisito: taxaJurus=12.75 representa 12,75% ao mes ==> expected: <112.75> but was: <1275.0>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1024)
+       br.winxbank.sistemabancario.CartaoCreditoTest.u14_juros_de1275_por_cento(CartaoCreditoTest.java:126)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:CartaoCreditoTest:u18_limite_negativo_deve_ser_rejeitado()
+    MethodSource [className = 'br.winxbank.sistemabancario.CartaoCreditoTest', methodName = 'u18_limite_negativo_deve_ser_rejeitado', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       br.winxbank.sistemabancario.CartaoCreditoTest.u18_limite_negativo_deve_ser_rejeitado(CartaoCreditoTest.java:156)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:CartaoCreditoTest:u15_juros_na_virada_do_ano()
+    MethodSource [className = 'br.winxbank.sistemabancario.CartaoCreditoTest', methodName = 'u15_juros_na_virada_do_ano', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Dezembro para janeiro deve ser um mes posterior ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       br.winxbank.sistemabancario.CartaoCreditoTest.u15_juros_na_virada_do_ano(CartaoCreditoTest.java:134)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:CartaoCreditoTest:u19_juros_nao_devem_duplicar_no_mesmo_mes()
+    MethodSource [className = 'br.winxbank.sistemabancario.CartaoCreditoTest', methodName = 'u19_juros_nao_devem_duplicar_no_mesmo_mes', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <1275.0> but was: <16256.25>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+       org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:81)
+       org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1014)
+       br.winxbank.sistemabancario.CartaoCreditoTest.u19_juros_nao_devem_duplicar_no_mesmo_mes(CartaoCreditoTest.java:166)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:CartaoCreditoTest:u17_compra_negativa_deve_ser_rejeitada()
+    MethodSource [className = 'br.winxbank.sistemabancario.CartaoCreditoTest', methodName = 'u17_compra_negativa_deve_ser_rejeitada', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Expected java.lang.IllegalArgumentException to be thrown, but nothing was thrown.
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:73)
+       org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+       org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+       br.winxbank.sistemabancario.CartaoCreditoTest.u17_compra_negativa_deve_ser_rejeitada(CartaoCreditoTest.java:149)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+  JUnit Jupiter:CartaoCreditoTest:u16_compra_recusada_nao_adia_vencimento()
+    MethodSource [className = 'br.winxbank.sistemabancario.CartaoCreditoTest', methodName = 'u16_compra_recusada_nao_adia_vencimento', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: Compra recusada deve preservar o mes da fatura existente ==> expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:214)
+       br.winxbank.sistemabancario.CartaoCreditoTest.u16_compra_recusada_nao_adia_vencimento(CartaoCreditoTest.java:143)
+       java.base/java.lang.reflect.Method.invoke(Method.java:569)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+       java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+Test run finished after 302 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        19 tests found           ]
+[         0 tests skipped         ]
+[        19 tests started         ]
+[         0 tests aborted         ]
+[        13 tests successful      ]
+[         6 tests failed          ]
+
