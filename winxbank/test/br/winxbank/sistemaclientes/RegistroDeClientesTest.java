@@ -11,6 +11,8 @@ import br.winxbank.sistemabancario.ContaPoupanca;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
@@ -117,7 +119,6 @@ public class RegistroDeClientesTest {
         }
     }   
 
-    
     @Test 
     void testRemoverCliente_1() // Sem clientes 
     {
@@ -300,5 +301,249 @@ public class RegistroDeClientesTest {
                 " | Cartao Credito no: 87654321| csv: 222" +
                 "| fatura: " + df.format(350.00) + " ]";
         assertEquals(esperado, outputStreamCaptor.toString().trim());
+    }
+
+    @Test 
+    void testRetornarCliente_1() // Sem clientes - lista vazia
+    {
+        Cliente clienteRetornado = reg.retornarCliente("123.456.789-10");
+        assertNull(clienteRetornado);
+    }
+
+    @Test 
+    void testRetornarCliente_2() // Lista com null
+    {
+        reg.getClientes().add(null);
+
+        // Act & Assert: verifica se a exceção esperada é lançada
+        NullPointerException exception = assertThrows(
+            NullPointerException.class,
+            () -> reg.retornarCliente("123.456.789-10")
+        );
+
+        // Valida a mensagem exata definida no código
+        assertEquals("A lista esta nula, nao foi possivel buscar cliente", exception.getMessage());
+    }
+
+    @Test 
+    void testRetornarCliente_3() // Cliente não encontrado
+    {
+        // Cliente que estará no registro
+        Cliente clienteAdicionado = mock(Cliente.class);
+        clienteAdicionado.cpf = "123.456.789-10";
+        clienteAdicionado.nome= "Jose";
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clienteAdicionado);
+        reg.setClientes(clientes);
+
+        Cliente clienteRetornado = reg.retornarCliente("109.876.543-21");
+        assertNull(clienteRetornado);
+
+    }
+
+    @Test 
+    void testRetornarCliente_4() // Cliente encontrado
+    {
+        // Cliente que estará no registro
+        Cliente clienteAdicionado = mock(Cliente.class);
+        clienteAdicionado.cpf = "123.456.789-10";
+        clienteAdicionado.nome= "Jose";
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clienteAdicionado);
+        reg.setClientes(clientes);
+
+        Cliente clienteRetornado = reg.retornarCliente("123.456.789-10");
+        assertEquals(clienteAdicionado, clienteRetornado);
+
+    }
+
+    @Test 
+    void testPrintarListaDeClientes_1() // Lista vazia
+    {
+        reg.printarListaDeClientes();
+        String esperado = "------------------ Clientes --------------------";
+        assertEquals(esperado, outputStreamCaptor.toString().trim());
+
+    }
+
+    @Test 
+    void testPrintarListaDeClientes_2() // Lista com um cliente winx
+    {
+        ClienteWinx clientWinxMock = mock(ClienteWinx.class);
+        when(clientWinxMock.getNome()).thenReturn("João");
+        when(clientWinxMock.getCpf()).thenReturn("123.456.789-10");
+        when(clientWinxMock.getPontosDeCompra()).thenReturn(10);
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clientWinxMock);
+        reg.setClientes(clientes);
+
+        reg.printarListaDeClientes();
+
+        String esperado = "------------------ Clientes --------------------\n" +
+        "Nome: João | CPF: 123.456.789-10 | Pontos por compra: 10\n" +
+        "Contas:\n" +
+        "------------------------------------------------";
+
+        assertEquals(esperado, outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+    }
+
+    @Test 
+    void testPrintarListaDeClientes_3() // Lista com um cliente comum
+    {
+        Cliente clientWinxMock = mock(Cliente.class);
+        when(clientWinxMock.getNome()).thenReturn("João");
+        when(clientWinxMock.getCpf()).thenReturn("123.456.789-10");
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clientWinxMock);
+        reg.setClientes(clientes);
+
+        reg.printarListaDeClientes();
+        
+        String esperado = "------------------ Clientes --------------------\n" +
+        "Nome: João| CPF: 123.456.789-10\n" +
+        "Contas:\n" +
+        "------------------------------------------------";
+
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+    }
+
+    @Test 
+    void testPrintarListaDeClientes_4() // Lista com Cliente de outra classe base
+    {
+        // Cliente que estará no registro
+        Cliente clienteAdicionado = new Cliente("João", "123.4556.789-10") {};
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clienteAdicionado);
+        reg.setClientes(clientes);
+        
+        reg.printarListaDeClientes();
+        String esperado = "------------------ Clientes --------------------" +
+        "\n------------------------------------------------" ;
+        assertEquals(esperado, outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+
+    }
+
+    @Test 
+    void testVisualizarDetalhesDoCliente_1() // Lista vazia
+    {
+        reg.visualizarDetalhesDoCliente("123.456.789-10");
+        String esperado = "";
+
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+    }
+
+    @Test 
+    void testVisualizarDetalhesDoCliente_2() // Cliente winx encontrado
+    {
+        ClienteWinx clientWinxMock = mock(ClienteWinx.class);
+        when(clientWinxMock.getNome()).thenReturn("João");
+        when(clientWinxMock.getCpf()).thenReturn("123.456.789-10");
+        when(clientWinxMock.getPontosDeCompra()).thenReturn(10);
+        clientWinxMock.cpf = "123.456.789-10";
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clientWinxMock);
+        reg.setClientes(clientes);
+
+        reg.visualizarDetalhesDoCliente("123.456.789-10");
+
+        String esperado = "Nome: João | CPF: 123.456.789-10 | Pontos por compra: 10\n" +
+        "Contas:\n";
+
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+    }
+
+    @Test 
+    void testVisualizarDetalhesDoCliente_3() // Cliente winx não encontrado
+    {
+        ClienteWinx clientWinxMock = mock(ClienteWinx.class);
+        when(clientWinxMock.getNome()).thenReturn("João");
+        when(clientWinxMock.getCpf()).thenReturn("123.456.789-10");
+        when(clientWinxMock.getPontosDeCompra()).thenReturn(10);
+        clientWinxMock.cpf = "123.456.789-10";
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clientWinxMock);
+        reg.setClientes(clientes);
+
+        reg.visualizarDetalhesDoCliente("109.876.543-21");
+
+        String esperado = "";
+
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+    }   
+
+    @Test 
+    void testVisualizarDetalhesDoCliente_4() // Cliente comum encontrado
+    {
+        Cliente clientMock = mock(Cliente.class);
+        when(clientMock.getNome()).thenReturn("João");
+        when(clientMock.getCpf()).thenReturn("123.456.789-10");
+        clientMock.cpf = "123.456.789-10";
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clientMock);
+        reg.setClientes(clientes);
+
+        reg.visualizarDetalhesDoCliente("123.456.789-10");
+
+        String esperado = "Nome: João| CPF: 123.456.789-10\n" +
+        "Contas:\n";
+        
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+
+    }
+
+    @Test 
+    void testVisualizarDetalhesDoCliente_5() // Cliente comum não encontrado
+    {
+        
+        Cliente clientMock = mock(Cliente.class);
+        when(clientMock.getNome()).thenReturn("João");
+        when(clientMock.getCpf()).thenReturn("123.456.789-10");
+        clientMock.cpf = "123.456.789-10";
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clientMock);
+        reg.setClientes(clientes);
+
+        reg.visualizarDetalhesDoCliente("109.876.543-21");
+
+        String esperado = "";
+
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+    }
+
+    @Test 
+    void testVisualizarDetalhesDoCliente_6() // Cliente de outra classe base
+    {
+        // Cliente que estará no registro
+        Cliente clienteAdicionado = new Cliente("João", "123.4556.789-10") {};
+
+        // Adiciona o cliente base ao registro
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        clientes.add(clienteAdicionado);
+        reg.setClientes(clientes);
+
+        reg.visualizarDetalhesDoCliente("123.456.789-10");
+
+        String esperado = "";
+
+        assertEquals(esperado.trim(), outputStreamCaptor.toString().replace("\r\n", "\n").trim());
+
     }
 }
