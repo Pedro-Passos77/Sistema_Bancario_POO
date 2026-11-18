@@ -25,6 +25,13 @@ public class RegistroDeClientesTest {
     RegistroDeClientes reg;
     PrintStream standardOut = System.out;
     ByteArrayOutputStream outputStreamCaptor;
+    
+    // Classe para testes em que o cliente não é da classe Cliente ou ClienteWinx
+    private class ClienteDiferente extends Cliente {
+        public ClienteDiferente(String nome, String cpf) {
+            super(nome, cpf);
+        }
+    }
 
     @BeforeEach 
     void testSetup()
@@ -38,10 +45,47 @@ public class RegistroDeClientesTest {
     }
 
     @Test 
-    void testCadastrarCliente_1()
+    void testCadastrarCliente_1() // CPF já existente
     {
 
     }
+
+    @Test 
+    void testCadastrarCliente_2() // Cadastro com lista vazia
+    {
+
+    }
+
+    @Test 
+    void testCadastrarCliente_3() // Cliente winx conta corrente
+    {
+
+    }
+
+    @Test 
+    void testCadastrarCliente_4() // Cliente winx conta poupança
+    {
+
+    }
+
+    @Test 
+    void testCadastrarCliente_5() // Cliente comum conta corrente
+    {
+
+    }
+
+    @Test 
+    void testCadastrarCliente_6() // Cliente comum conta poupança
+    {
+
+    }
+
+    @Test 
+    void testCadastrarCliente_7() // Saldo Nan
+    {
+
+    }
+
 
     @Test 
     void testAtualizarCliente_1() throws Exception // Sem clientes 
@@ -254,8 +298,12 @@ public class RegistroDeClientesTest {
         when(cartao.getNumero()).thenReturn(12345678);
         when(cartao.getCsv()).thenReturn(111);
 
-        //Necessário utilizar a classe original para comparação 'conta.getClass() == ContaPoupanca.class' no código original
-        ContaPoupanca poupanca = new ContaPoupanca(123, 1500.50, cartao, 0.0);
+        ContaPoupanca poupanca = mock(ContaPoupanca.class);
+        when(poupanca.getTipoDaConta()).thenReturn("Poupanca");
+        when(poupanca.getNumeroConta()).thenReturn(123);
+        when(poupanca.getSaldo()).thenReturn(1500.50);
+        when(poupanca.getCartao()).thenReturn(cartao);
+        when(poupanca.getDividaDeEmprestimo()).thenReturn(0.0);
 
         ArrayList<Conta> contas = new ArrayList<>();
         contas.add(poupanca); 
@@ -264,7 +312,7 @@ public class RegistroDeClientesTest {
 
         reg.visualizarContas(cliente);
         DecimalFormat df = new DecimalFormat("0.00");
-        String esperado = "[ Conta" + poupanca.getTipoDaConta() + " no: 123" +
+        String esperado = "[ ContaPoupanca no: 123" +
                 " | Saldo: " + df.format(1500.50) +
                 " | DividaEmprestimo: " + df.format(0.0) +
                 " | Cartao Debito no: 12345678| csv: 111 ]";
@@ -285,7 +333,13 @@ public class RegistroDeClientesTest {
         when(cartaoCredito.getCsv()).thenReturn(222);
         when(cartaoCredito.getFatura()).thenReturn(350.00);
 
-        ContaCorrente corrente = new ContaCorrente(123, 1500.50, cartao, 0.0, cartaoCredito);
+        ContaCorrente corrente = mock(ContaCorrente.class);
+        when(corrente.getTipoDaConta()).thenReturn("Corrente");
+        when(corrente.getNumeroConta()).thenReturn(123);
+        when(corrente.getSaldo()).thenReturn(1500.50);
+        when(corrente.getCartao()).thenReturn(cartao);
+        when(corrente.getDividaDeEmprestimo()).thenReturn(0.0);
+        when(corrente.getCartaoCredito()).thenReturn(cartaoCredito);
 
         ArrayList<Conta> contas = new ArrayList<>();
         contas.add(corrente);
@@ -294,7 +348,7 @@ public class RegistroDeClientesTest {
 
         reg.visualizarContas(cliente);
         DecimalFormat df = new DecimalFormat("0.00");
-        String esperado = "[ Conta" + corrente.getTipoDaConta() + "no: 123" +
+        String esperado = "[ ContaCorrenteno: 123" +
                 " | Saldo: " + df.format(1500.50) +
                 " | DividaEmprestimo: " + df.format(0.0) +
                 " | Cartao Debito no: 12345678| csv: 111" +
@@ -419,7 +473,7 @@ public class RegistroDeClientesTest {
     void testPrintarListaDeClientes_4() // Lista com Cliente de outra classe base
     {
         // Cliente que estará no registro
-        Cliente clienteAdicionado = new Cliente("João", "123.4556.789-10") {};
+        Cliente clienteAdicionado = new ClienteDiferente("João", "123.4556.789-10") {};
 
         // Adiciona o cliente base ao registro
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
@@ -532,7 +586,7 @@ public class RegistroDeClientesTest {
     void testVisualizarDetalhesDoCliente_6() // Cliente de outra classe base
     {
         // Cliente que estará no registro
-        Cliente clienteAdicionado = new Cliente("João", "123.4556.789-10") {};
+        Cliente clienteAdicionado = new ClienteDiferente("João", "123.4556.789-10") {};
 
         // Adiciona o cliente base ao registro
         ArrayList<Cliente> clientes = new ArrayList<Cliente>();
